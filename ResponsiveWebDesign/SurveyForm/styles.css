@@ -1,0 +1,112 @@
+body {
+    font-family: monospace, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://img.freepik.com/free-photo/anime-night-sky-illustration_23-2151684344.jpg?t=st=1737316103~exp=1737319703~hmac=4620244fd55df583016927d5a2568e54ad544bc496166ee98e6dd09f51d6a77e&w=1380);
+    opacity: 95%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#title{
+    text-align: center;
+    color: #fff;
+}
+
+#description {
+    text-align: center;
+    color: #dbdbdb;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.radio-container {
+    display:flex;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.checkbox-container{
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    gap: 5px; /* Adjust the gap between columns as needed */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+input[type="submit"]{
+    margin:auto;
+    margin-top: -32px;
+    margin-bottom: 5px;
+    width: 25%;
+    padding: 10px;
+    background-color: #90eaf8;
+    color: #fff;
+    border: thick double #b4e6fa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;    
+    float:right;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anime Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Anime Form</h1>
+    <p id="description">Fill this form to let we know about people's anime preference!</p>
+    <form id="survey-form">
+        <fieldset>
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="enter your name">
+            
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="enter your email">
+            
+            <label for="number" id="number-label">Age:</label>
+            <input type="number" id="number" name="age" min="1" max="120" required placeholder="enter your age">
+        </fieldset>
+        <fieldset>                
+            <legend>Which is your gender?</legend>                
+            <div class="radio-container">
+                <input type="radio" name="gender" value="male" id="male" required>
+                <label for="male">Male</label>
+                
+                <input type="radio" name="gender" value="female" id="female" required>
+                <label for="female">Female</label>
+            </div>    
+        </fieldset>
+        <fieldset>
+            <legend>Which Anime genre do you watch?</legend>
+            <div class="checkbox-container">
+                <input type="checkbox" name="animeGenre" value="shounen" id="shounen">
+                <label for="shounen">Shounen</label>
+                
+                <input type="checkbox" name="animeGenre[]" value="shoujo" id="shoujo">
+                <label for="shoujo">Shoujo</label>
+                
+                <input type="checkbox" name="animeGenre[]" value="seinen" id="seinen">
+                <label for="seinen">Seinen</label>
+                
+                <input type="checkbox" name="animeGenre[]" value="isekai" id="isekai">
+                <label for="isekai">Isekai</label>
+                
+                <input type="checkbox" name="animeGenre[]" value="slice-of-life" id="slice-of-life">
+                <label for="slice-of-life">Slice-of-life</label>
+                
+                <input type="checkbox" name="animeGenre[]" value="horror" id="horror">
+                <label for="horror">Horror</label>
+                
+                <input type="checkbox" name="animeGenre[]" value="comedy" id="comedy">
+                <label for="comedy">Comedy</label>
+                
+                <input type="checkbox" name="animeGenre[]" value="sports" id="sports">
+                <label for="sports">Sports</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <p>What is your favorite anime genre?</p>
+            <select id = "favoriteAnimeGenre" class="favoriteAnimeGenre" name="favoriteAnimeGenre" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="shounen">Shounen</option>
+                <option value="shoujo">Shoujo</option>
+                <option value="seinen">Seinen</option>
+                <option value="isekai">Isekai</option>
+                <option value="slice-of-life">Slice-of-life</option>
+                <option value="horror">Horror</option>
+                <option value="comedy">Comedy</option>
+                <option value="sports">Sports</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <p>Mention your preferred animes!</p>
+            <textarea id="preferredAnimes" class="preferredAnimes" name="preferredAnimes" placeholder="Enter your preferred animes here..."></textarea>
+        </fieldset>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

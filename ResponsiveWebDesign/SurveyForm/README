@@ -1,0 +1,41 @@
+create the following js file and run it using node.js, then open this html in the browser and test it!
+
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const fs = require('fs');
+const app = express();
+const port = 3000;
+
+// Use CORS middleware
+app.use(cors());
+
+// Middleware to parse URL-encoded form data
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Middleware to parse JSON data
+app.use(bodyParser.json());
+
+// Route to handle form submission
+app.post('/submit', (req, res) => {
+  const formData = req.body;
+  formData.animeGenre = req.body['animeGenre[]'];
+
+  // Save the form data to a file
+  const data = `Name: ${formData.name}\nEmail: ${formData.email}\nAge: ${formData.age}\nGender: ${formData.gender}\nWatchedAnimeGenres: ${formData.animeGenre}\nFavoriteAnimeGenre: ${formData.favoriteAnimeGenre}\nPreferredAnimes: ${formData.preferredAnimes}\n\n`;
+  
+  fs.appendFile('form-data.txt', data, (err) => {
+    if (err) {
+      console.error('Error writing to file', err);
+      res.status(500).json({ message: 'Error saving data' });
+    } else {
+      res.json({ message: 'Form data received and saved', formData: formData });
+    }
+  });
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
