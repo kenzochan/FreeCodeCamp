@@ -75,8 +75,12 @@
             <p>Mention your preferred animes!</p>
             <textarea id="preferredAnimes" class="preferredAnimes" name="preferredAnimes" placeholder="Enter your preferred animes here..."></textarea>
         </fieldset>
-        <input type="submit" id="submit" value="Submit">
+        <input type="submit" id="submit" value="Submit" onclick="showMessageBox()">
     </form>
+    <div class="message-box" id="messageBox"> 
+        <span class="close-btn" onclick="closeMessageBox()">&times;</span> 
+        <p class="message-box-text">This is a message box that can be closed.</p> 
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

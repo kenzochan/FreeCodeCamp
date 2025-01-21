@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(https://img.freepik.com/free-photo/anime-night-sky-illustration_23-2151684344.jpg?t=st=1737316103~exp=1737319703~hmac=4620244fd55df583016927d5a2568e54ad544bc496166ee98e6dd09f51d6a77e&w=1380);
+    background-size: cover; /* This makes the background image resize to cover the entire element */ 
+    background-repeat: no-repeat; /* This ensures the image doesn't repeat */ 
+    background-position: center;
     opacity: 95%;
 }
 
@@ -110,3 +113,31 @@ input[type="submit"]{
     font-weight: bold;    
     float:right;
 }
+
+input[type="submit"]:hover {
+    background-color: #b4e6fa;
+    color: #e5ff00;
+}
+
+.message-box {
+    display: none; /* Initial state is hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f9edbe;
+    border: 1px solid #f0c36d;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text content */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
